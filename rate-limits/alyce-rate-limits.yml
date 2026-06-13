@@ -1,0 +1,46 @@
+specificationVersion: "0.1"
+id: alyce-rate-limits
+name: Alyce API Rate Limits
+description: >-
+  Alyce does not publicly document specific API rate limits. Rate limits
+  are enforced at the platform level and vary by plan tier and integration
+  type. API consumption is metered based on gift actions and custom
+  activities triggered through CRM integrations. Contact Alyce support
+  for specific rate limit details applicable to your plan.
+url: https://help.alyce.com/collection/357-integrations
+limits:
+  - name: API Requests
+    description: >-
+      General API request rate limits are not publicly disclosed. Rate
+      limiting is enforced per API key and per account based on plan tier.
+    limit: Not publicly disclosed
+    period: Not publicly disclosed
+    scope: Per API key / Per account
+  - name: Gift Sends
+    description: >-
+      Gift send operations are rate-limited based on plan tier and available
+      budget. Unlimited gift sends are included in QuickStart and above plans
+      subject to available gift budget.
+    limit: Unlimited (subject to budget)
+    period: Annual
+    scope: Per account
+  - name: CRM Sync Operations
+    description: >-
+      Salesforce and HubSpot API sync operations are rate-limited by the
+      respective CRM platform limits. Alyce API calls vary in consumption
+      depending on gift actions and custom activities configured.
+    limit: Governed by CRM platform limits
+    period: Rolling
+    scope: Per integration
+  - name: Webhook Events
+    description: >-
+      Webhook delivery for gift status events (sent, accepted, declined,
+      exchanged, donated) is subject to platform-level throttling.
+    limit: Not publicly disclosed
+    period: Not publicly disclosed
+    scope: Per webhook endpoint
+notes: >-
+  Alyce API rate limits are not publicly documented. For specific limits
+  applicable to enterprise and custom integration plans, contact Alyce
+  support via help.alyce.com. Rate limits may be negotiated as part of
+  enterprise contracts.

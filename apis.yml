@@ -1,0 +1,73 @@
+aid: alyce
+name: Alyce
+description: >-
+  Alyce is an AI-powered corporate gifting platform that enables B2B sales,
+  marketing, and customer success teams to send hyper-personalized gifts at
+  scale. The platform provides a REST API for sending personalized gifts,
+  tracking gift acceptance and engagement, managing budgets and marketplaces,
+  and integrating with CRM and marketing automation tools including Salesforce,
+  HubSpot, Marketo, Eloqua, Outreach, and Salesloft.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/alyce/refs/heads/main/apis.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+tags:
+  - Gifting
+  - Corporate Gifting
+  - B2B
+  - Marketing Automation
+  - CRM Integration
+  - Account-Based Marketing
+  - Sales Enablement
+  - AI
+  - Personalization
+  - Direct Mail
+apis:
+  - aid: alyce:alyce-api
+    name: Alyce API
+    description: >-
+      REST API for the Alyce corporate gifting platform enabling programmatic
+      gift sending, recipient tracking, budget management, marketplace
+      configuration, and CRM workflow automation. Supports integrations with
+      Salesforce, HubSpot, Marketo, Eloqua, Outreach, and Salesloft.
+    humanURL: https://help.alyce.com/collection/357-integrations
+    baseURL: https://app.alyce.com/api
+    tags:
+      - Gifting
+      - Corporate Gifting
+      - B2B
+      - Marketing Automation
+      - CRM
+    properties:
+      - type: Documentation
+        url: https://help.alyce.com/collection/357-integrations
+      - type: OpenAPI
+        url: https://app.alyce.com/api
+common:
+  - type: Website
+    url: https://www.alyce.com/
+  - type: Documentation
+    url: https://help.alyce.com/collection/357-integrations
+  - type: GitHubOrg
+    url: https://github.com/alycecom
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/alyce-co
+  - type: Blog
+    url: https://www.alyce.com/blog/
+  - type: Pricing
+    url: https://www.alyce.com/product/
+  - type: StatusPage
+    url: https://status.alyce.com/
+  - type: X
+    url: https://x.com/alycegifts
+  - type: Plans
+    url: plans/alyce-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/alyce-rate-limits.yml
+  - type: FinOps
+    url: finops/alyce-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

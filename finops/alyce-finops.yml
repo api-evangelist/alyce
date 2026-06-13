@@ -1,0 +1,90 @@
+specificationVersion: "1.0"
+id: alyce-finops
+name: Alyce FinOps Framework
+description: >-
+  FinOps Framework FOCUS-aligned cost and usage model for the Alyce
+  AI-powered corporate gifting platform. Alyce uses a three-component
+  pricing model: annual platform fee, gift invitation costs, and
+  gift fulfillment costs. Budget management, ROI attribution, and
+  spend controls are native platform features.
+url: https://www.alyce.com/product/
+framework: FinOps Framework 1.0
+focus:
+  currency: USD
+  billing_period: Annual
+cost_components:
+  - name: Platform Fee
+    description: >-
+      Annual subscription fee for access to the Alyce platform, including
+      CRM integrations, AI personalization engine, analytics dashboard,
+      and customer success support. Billed annually.
+    type: Fixed
+    cadence: Annual
+    range:
+      minimum: 10000
+      typical_low: 22250
+      typical_high: 150000
+      currency: USD
+    notes: >-
+      QuickStart tier starts at $10,000/year. Professional typically
+      $22,250–$60,450/year. Enterprise $70,000–$150,000+/year.
+  - name: Gift Invitations
+    description: >-
+      Per-send or bundled cost for gift invitations delivered to recipients.
+      The Power-of-Choice experience allows recipients to accept, exchange,
+      or donate the gift value.
+    type: Variable
+    cadence: Per send / Bundled
+    notes: >-
+      Unlimited sends included in QuickStart and above. Actual gift
+      cost is separate from invitation/delivery cost.
+  - name: Gift Fulfillment
+    description: >-
+      Cost of the physical or digital gifts ordered through the Alyce
+      marketplace. This is the primary variable cost component and
+      represents the gift budget consumed by the account.
+    type: Variable
+    cadence: Per gift fulfilled
+    range:
+      enterprise_annual_budget_typical: 500000
+      currency: USD
+    notes: >-
+      Enterprise gift budgets commonly exceed $500,000/year. Gifts
+      span physical, digital, charitable donation, and branded swag.
+  - name: Custom Integration Setup
+    description: >-
+      One-time or ongoing fees for custom API integrations, advanced
+      automation workflows, or non-standard CRM connectors beyond the
+      included standard integrations.
+    type: Variable
+    cadence: One-time / Ongoing
+    notes: >-
+      Standard integrations (Salesforce, HubSpot, Marketo, Eloqua,
+      Outreach, Salesloft) are typically included in platform fees.
+      Custom API work may incur additional fees.
+optimization:
+  - name: Gift Budget Controls
+    description: >-
+      Use Alyce's native budget management tools to set per-user, per-team,
+      and per-campaign gift budgets to prevent overspend.
+  - name: Marketplace Curation
+    description: >-
+      Curate custom marketplaces to limit gift options to a cost range
+      appropriate for campaign goals and budget.
+  - name: ROI Attribution
+    description: >-
+      Use Alyce ROI dashboards to attribute gift spend to pipeline and
+      revenue outcomes, enabling data-driven budget optimization.
+  - name: Gift Acceptance Rate Monitoring
+    description: >-
+      Monitor acceptance, exchange, and decline rates to optimize gift
+      selection and reduce wasted spend on unaccepted gifts.
+  - name: CRM Integration Automation
+    description: >-
+      Automate gift sends through CRM triggers to reduce manual overhead
+      and ensure gifts are sent at optimal points in the buyer journey.
+notes: >-
+  Alyce pricing is fully custom and requires direct sales engagement.
+  All cost figures are based on publicly available market data from
+  third-party sources (Vendr, PerkUp, G2). Alyce was acquired by
+  Sendoso in February 2024 and operates as Alyce by Sendoso.

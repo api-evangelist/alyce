@@ -1,0 +1,60 @@
+specificationVersion: "0.1"
+id: alyce-plans-pricing
+name: Alyce Plans & Pricing
+description: >-
+  Alyce offers custom enterprise pricing with three core cost components:
+  an annual platform fee, cost of gift invitations, and cost of gifts.
+  Pricing is not publicly listed and requires direct sales engagement.
+  Enterprise deployments typically start at $22,250 annually and can
+  exceed $150,000 for large deployments. A QuickStart tier is available
+  for customer gifting at $10,000 annually.
+url: https://www.alyce.com/product/
+plans:
+  - name: QuickStart
+    description: >-
+      Entry-level customer gifting package with pre-loaded campaigns and
+      templates, custom marketplaces, and unlimited gift sends.
+    rate: "$10,000/year platform fee + gift costs"
+    features:
+      - Eight pre-loaded campaigns and templates
+      - Three custom marketplaces
+      - Unlimited gift sends
+      - Basic CRM integration
+      - Gift tracking and reporting
+  - name: Professional
+    description: >-
+      Mid-market plan for sales and marketing teams with full CRM integrations,
+      AI-powered personalization, and advanced campaign management.
+    rate: "Custom pricing — typically $22,250 to $60,450/year"
+    features:
+      - AI-driven personal interest research
+      - Full Salesforce and HubSpot integration
+      - Marketo and Eloqua integration
+      - Outreach and Salesloft integration
+      - Custom marketplaces
+      - Budget management and controls
+      - Real-time gift tracking
+      - ROI dashboards
+      - Address verification
+      - Global gift marketplace
+  - name: Enterprise
+    description: >-
+      Full enterprise deployment for large organizations with complex multi-team
+      gifting programs, advanced analytics, and dedicated support.
+    rate: "Custom pricing — typically $70,000 to $150,000+/year"
+    features:
+      - Everything in Professional
+      - Multi-team and multi-region support
+      - Advanced ABM integrations (6sense, Demandbase, RollWorks)
+      - Custom API integrations
+      - Dedicated customer success manager
+      - Advanced analytics and attribution
+      - Enterprise SSO
+      - Custom legal and compliance support
+      - Global logistics and fulfillment
+      - Gift budget exceeding $500,000/year supported
+notes: >-
+  Pricing requires direct sales engagement. Gift costs are separate from
+  platform fees. Custom integrations and advanced automation workflows may
+  incur additional setup fees. Alyce was acquired by Sendoso in February 2024
+  and now operates as Alyce by Sendoso.
