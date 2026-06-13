@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "aid": "https://apis.io/vocab/aid",
+    "alyce": "https://www.alyce.com/vocab/",
+    "Organization": "Organization",
+    "name": "name",
+    "description": "description",
+    "url": "url",
+    "sameAs": "sameAs",
+    "WebAPI": "WebAPI",
+    "documentation": "documentation",
+    "termsOfService": "termsOfService",
+    "provider": "provider",
+    "SoftwareApplication": "SoftwareApplication",
+    "applicationCategory": "applicationCategory",
+    "Gift": {
+      "@id": "alyce:Gift",
+      "@type": "@id"
+    },
+    "Recipient": {
+      "@id": "alyce:Recipient",
+      "@type": "@id"
+    },
+    "Budget": {
+      "@id": "alyce:Budget",
+      "@type": "@id"
+    },
+    "Marketplace": {
+      "@id": "alyce:Marketplace",
+      "@type": "@id"
+    },
+    "Campaign": {
+      "@id": "alyce:Campaign",
+      "@type": "@id"
+    },
+    "giftStatus": {
+      "@id": "alyce:giftStatus",
+      "@type": "@id"
+    },
+    "acceptanceStatus": {
+      "@id": "alyce:acceptanceStatus"
+    },
+    "sendGift": {
+      "@id": "alyce:sendGift",
+      "@type": "@id"
+    },
+    "trackEngagement": {
+      "@id": "alyce:trackEngagement",
+      "@type": "@id"
+    }
+  },
+  "@type": "Organization",
+  "name": "Alyce",
+  "description": "Alyce is an AI-powered corporate gifting platform that enables B2B sales, marketing, and customer success teams to send hyper-personalized gifts at scale.",
+  "url": "https://www.alyce.com/",
+  "sameAs": [
+    "https://github.com/alycecom",
+    "https://www.linkedin.com/company/alyce-co",
+    "https://x.com/alycegifts"
+  ],
+  "provider": {
+    "@type": "WebAPI",
+    "name": "Alyce API",
+    "description": "REST API for the Alyce corporate gifting platform enabling programmatic gift sending, recipient tracking, budget management, marketplace configuration, and CRM workflow automation.",
+    "documentation": "https://help.alyce.com/collection/357-integrations",
+    "url": "https://app.alyce.com/api"
+  }
+}
