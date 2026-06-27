@@ -1,14 +1,14 @@
 {
   "aid": "alyce",
   "url": "https://www.alyce.com/blog/",
-  "fetched": "2026-06-14T20:42:17Z",
-  "posts": [],
   "repo": "alyce",
   "feeds": [
     {
-      "source": "https://www.linkedin.com/company/alyce-co",
-      "error": "HTTPError"
+      "source": "https://www.alyce.com/blog/",
+      "saved": 0,
+      "error": "DNS resolution failed (ENOTFOUND www.alyce.com)"
     }
   ],
+  "fetched": "2026-06-27T12:22:43Z",
   "post_count": 0
 }
