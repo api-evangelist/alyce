@@ -4,11 +4,10 @@
   "repo": "alyce",
   "feeds": [
     {
-      "source": "https://www.alyce.com/blog/",
-      "saved": 0,
-      "error": "DNS resolution failed (ENOTFOUND www.alyce.com)"
+      "source": "https://www.linkedin.com/company/alyce-co",
+      "error": "HTTPError"
     }
   ],
-  "fetched": "2026-06-27T12:22:43Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0
 }
