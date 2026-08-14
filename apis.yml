@@ -6,7 +6,12 @@ description: >-
   scale. The platform provides a REST API for sending personalized gifts,
   tracking gift acceptance and engagement, managing budgets and marketplaces,
   and integrating with CRM and marketing automation tools including Salesforce,
-  HubSpot, Marketo, Eloqua, Outreach, and Salesloft.
+  HubSpot, Marketo, Eloqua, Outreach, and Salesloft. Alyce, Inc. was acquired by
+  Sendoso in February 2024 and operated as "Alyce by Sendoso"; the standalone Alyce
+  product surface has since been decommissioned — as of August 2026 the alyce.com
+  apex and every product subdomain (www, app, api, docs, dashboard, recipient) no
+  longer resolve, the documentation host returns a Cloudflare origin error, and the
+  status page is inactive. This profile is retained as a historical record.
 type: Index
 accessModel:
   pricing: paid
@@ -23,7 +28,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/alyce.png
 url: https://raw.githubusercontent.com/api-evangelist/alyce/refs/heads/main/apis.yml
 created: "2026-06-13"
-modified: "2026-06-13"
+modified: "2026-08-13"
 specificationVersion: "0.19"
 tags:
   - Gifting
@@ -52,28 +57,25 @@ apis:
       - B2B
       - Marketing Automation
       - CRM
-    properties:
-      - type: Documentation
-        url: https://help.alyce.com/collection/357-integrations
-      - type: OpenAPI
-        url: https://app.alyce.com/api
+    x-status: retired
+    x-note: >-
+      humanURL and baseURL are retained as the historical record of where the Alyce API
+      and its integration documentation lived. Both hosts were re-probed on 2026-08-13:
+      app.alyce.com returns NXDOMAIN and help.alyce.com returns Cloudflare error 525.
+      The former "OpenAPI" property pointed at the API base URL, not at a specification
+      document, and has been removed as false credit — Alyce never published a
+      machine-readable contract at a reachable URL. See lifecycle/alyce-lifecycle.yml.
 common:
   - type: DomainSecurity
     url: security/alyce-domain-security.yml
+  - type: Lifecycle
+    url: lifecycle/alyce-lifecycle.yml
   - type: Website
     url: https://www.alyce.com/
-  - type: Documentation
-    url: https://help.alyce.com/collection/357-integrations
   - type: GitHubOrg
     url: https://github.com/alycecom
   - type: LinkedIn
     url: https://www.linkedin.com/company/alyce-co
-  - type: Blog
-    url: https://www.alyce.com/blog/
-  - type: Pricing
-    url: https://www.alyce.com/product/
-  - type: StatusPage
-    url: https://status.alyce.com/
   - type: X
     url: https://x.com/alycegifts
   - type: Plans
@@ -85,3 +87,29 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Alyce was absorbed into Sendoso after the February 2024 acquisition and its
+    standalone surface has been switched off — alyce.com, www, app, api, docs,
+    dashboard and recipient return NXDOMAIN at 1.1.1.1, 8.8.8.8 and 9.9.9.9, the
+    documentation host help.alyce.com answers Cloudflare 525 with a dead origin, and
+    status.alyce.com renders Atlassian's "Page Inactive" placeholder.
+  evidence:
+    - url: https://www.alyce.com/
+      status: 0
+    - url: https://app.alyce.com/api
+      status: 0
+    - url: https://help.alyce.com/collection/357-integrations
+      status: 525
+    - url: https://status.alyce.com/
+      status: 200
+    - url: https://github.com/alycecom
+      status: 200
+  checked: '2026-08-13'
