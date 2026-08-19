@@ -1,0 +1,150 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  Live DNS + HTTP probes of every alyce.com host on 2026-08-13, corroborated by the
+  Internet Archive CDX index for alyce.com and by the public record of the Sendoso
+  acquisition.
+status: retired
+summary: >-
+  The Alyce product surface is decommissioned. Alyce, Inc. was acquired by Sendoso on
+  1 February 2024 and operated as "Alyce by Sendoso"; during 2025 the standalone Alyce
+  web, application and documentation hosts were taken down. As of 2026-08-13 the
+  alyce.com apex and every product subdomain (www, app, api, docs, developer,
+  dashboard, dashboard-sandbox, recipient) return NXDOMAIN at three independent public
+  resolvers, the documentation host returns a Cloudflare origin error, and the status
+  page renders "Page Inactive". There is no reachable API, no reachable developer
+  documentation, and no machine-readable contract of any kind.
+
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: >-
+    Alyce publicly stated (Tyk case study, 2021) that it standardised on the OpenAPI
+    Specification from v3 of its API onward and intended to open a customer API portal.
+    No such portal or spec was ever published at a public URL that is reachable today,
+    and the hosts that would have served it no longer resolve.
+
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: >-
+    No deprecation or sunset policy was ever published, and none is reachable now. The
+    product was withdrawn without a public deprecation notice at any alyce.com URL.
+
+sla:
+  url: null
+  uptime_target: null
+
+status_page:
+  url: https://status.alyce.com/
+  active: false
+  http_status: 200
+  effective_url: https://alyce.statuspage.io/inactive
+  page_title: Alyce Status - Page Inactive
+  note: >-
+    The Atlassian Statuspage subscription is terminated. The host answers HTTP 200 with
+    the vendor's "Page Inactive" placeholder rather than any component or incident data.
+    This is a soft-200: it is NOT evidence of a served status page, so no
+    common[].type StatusPage pointer is emitted for it.
+
+acquisition:
+  acquirer: Sendoso
+  acquirer_url: https://www.sendoso.com/
+  announced: '2024-02-01'
+  operating_name_after: Alyce by Sendoso
+  note: >-
+    Sendoso's own site is live (HTTP 200). Any gifting API Sendoso publishes belongs to
+    Sendoso and is profiled under that company — it is not recorded here, because a
+    contract served by the acquirer's host is not an Alyce contract.
+
+decommission_timeline:
+  - date: '2025-09-02'
+    event: >-
+      Internet Archive first records help.alyce.com (documentation host) returning
+      Cloudflare 525 — the docs origin was already down.
+    evidence: 'web.archive.org CDX: help.alyce.com 20250902224337 525'
+  - date: '2025-10-08'
+    event: Last archived HTTP 200 for https://www.alyce.com/.
+    evidence: 'web.archive.org CDX: www.alyce.com 20251008103019 200'
+  - date: '2025-10-09'
+    event: www.alyce.com begins answering 301 rather than serving the site.
+    evidence: 'web.archive.org CDX: www.alyce.com 20251009022644 301'
+  - date: '2025-12-16'
+    event: Last archived capture of the customer application host dashboard.alyce.com.
+    evidence: 'web.archive.org CDX: dashboard.alyce.com 20251216091429 200'
+  - date: '2026-01-02'
+    event: www.alyce.com archived as HTTP 404.
+    evidence: 'web.archive.org CDX: www.alyce.com 20260102013037 404'
+  - date: '2026-08-13'
+    event: >-
+      No A or AAAA record for alyce.com, www, app, api, docs, developer, dashboard,
+      dashboard-sandbox or recipient at 1.1.1.1, 8.8.8.8 and 9.9.9.9. Domain is still
+      registered (GoDaddy, Cloudflare nameservers, expiry 2028-12-14) and still carries
+      Google Workspace MX records, so mail resolves but the web product does not.
+    evidence: live dig + curl probes
+
+link_probe:
+  checked: '2026-08-13'
+  note: >-
+    Every URL previously wired into apis.yml, probed with curl -L. Pointers whose target
+    no longer exists were removed from apis.yml in this pass so the profile does not
+    credit Alyce with pages that cannot be reached.
+  results:
+    - url: https://www.alyce.com/
+      status: 0
+      detail: NXDOMAIN
+      was: common[].type Website
+    - url: https://www.alyce.com/blog/
+      status: 0
+      detail: NXDOMAIN
+      was: common[].type Blog
+      action: pointer removed
+    - url: https://www.alyce.com/product/
+      status: 0
+      detail: NXDOMAIN
+      was: common[].type Pricing
+      action: pointer removed
+    - url: https://app.alyce.com/api
+      status: 0
+      detail: NXDOMAIN
+      was: apis[0].baseURL and apis[0].properties[].type OpenAPI
+      action: >-
+        OpenAPI pointer removed — the URL was the API base, never a specification
+        document, and the host does not resolve.
+    - url: https://help.alyce.com/collection/357-integrations
+      status: 525
+      detail: Cloudflare origin SSL handshake failed; origin down since at least 2025-09-02
+      was: common[].type Documentation and apis[0].humanURL
+      action: Documentation pointer removed
+    - url: https://status.alyce.com/
+      status: 200
+      detail: 'redirects to alyce.statuspage.io/inactive — "Page Inactive" placeholder'
+      was: common[].type StatusPage
+      action: pointer removed
+    - url: https://github.com/alycecom
+      status: 200
+      detail: >-
+        Organization exists (created 2019-09-15, "AI-powered corporate gifting platform",
+        Boston MA) but publishes 0 public repositories.
+      action: pointer retained
+    - url: https://x.com/alycegifts
+      status: 200
+      action: pointer retained
+    - url: https://www.linkedin.com/company/alyce-co
+      status: 999
+      detail: LinkedIn bot challenge; profile exists
+      action: pointer retained
+    - url: https://content.alyce.com/
+      status: 404
+      detail: CloudFront marketing CDN, no content served
+    - url: https://giftinggurus.alyce.com/
+      status: 200
+      detail: >-
+        CNAME to alyce.influitive.com — a third-party Influitive community host, not an
+        Alyce-operated surface.
+    - url: https://www.sendoso.com/
+      status: 200
+      detail: acquirer, live
+
+deprecated_operations: []

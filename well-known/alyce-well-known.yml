@@ -1,0 +1,114 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  Live HTTP probes of every host named in apis.yml (baseURL, humanURL, Website,
+  Documentation, StatusPage) plus the additional Alyce subdomains recovered from the
+  Internet Archive CDX index (dashboard, dashboard-sandbox, recipient, api, docs,
+  developer, content, giftinggurus).
+result: no-hit
+summary: >-
+  No /.well-known/ document served by an Alyce-controlled host was found. Alyce's
+  application, API and documentation hosts no longer resolve in DNS; the only
+  /.well-known/ 200 observed anywhere on alyce.com is the Atlassian Statuspage
+  security.txt served from status.alyce.com, which is Atlassian's document
+  (Canonical: https://www.atlassian.com/.well-known/security.txt), not Alyce's, and is
+  therefore recorded as a MISS. No WellKnown or SecurityTxt pointer is emitted.
+hosts:
+  - host: app.alyce.com
+    reachable: false
+    note: >-
+      apis.yml baseURL host. No A or AAAA record at 1.1.1.1, 8.8.8.8 or 9.9.9.9;
+      all /.well-known/ probes fail at DNS resolution.
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+      - path: /.well-known/openid-configuration
+        status: 0
+      - path: /.well-known/oauth-authorization-server
+        status: 0
+      - path: /.well-known/api-catalog
+        status: 0
+      - path: /.well-known/ai-plugin.json
+        status: 0
+      - path: /.well-known/agent-card.json
+        status: 0
+      - path: /.well-known/agent.json
+        status: 0
+  - host: www.alyce.com
+    reachable: false
+    note: Company website host. No A or AAAA record at any of three public resolvers.
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+      - path: /.well-known/openid-configuration
+        status: 0
+      - path: /.well-known/oauth-authorization-server
+        status: 0
+      - path: /.well-known/api-catalog
+        status: 0
+      - path: /.well-known/ai-plugin.json
+        status: 0
+      - path: /.well-known/agent-card.json
+        status: 0
+      - path: /.well-known/agent.json
+        status: 0
+  - host: help.alyce.com
+    reachable: false
+    note: >-
+      Documentation host. Resolves to Cloudflare (172.66.156.40 / 104.20.36.242) but
+      the origin is down — every path, including the site root, returns Cloudflare
+      error 525 (origin SSL handshake failed) or 522.
+    documents:
+      - path: /.well-known/security.txt
+        status: 522
+      - path: /.well-known/openid-configuration
+        status: 525
+      - path: /.well-known/oauth-authorization-server
+        status: 525
+      - path: /.well-known/oauth-protected-resource
+        status: 525
+      - path: /.well-known/api-catalog
+        status: 525
+      - path: /.well-known/ai-plugin.json
+        status: 525
+      - path: /.well-known/agent-card.json
+        status: 525
+      - path: /.well-known/agent.json
+        status: 525
+  - host: status.alyce.com
+    reachable: true
+    third_party: true
+    note: >-
+      CNAME to vt27jzkwjz94.stspg-customer.com (Atlassian Statuspage). The status page
+      itself renders "Alyce Status - Page Inactive". The one 200 below is Atlassian's
+      own PGP-signed security.txt, self-declared canonical at
+      https://www.atlassian.com/.well-known/security.txt — it belongs to the hosting
+      vendor, not to Alyce, and is NOT counted as an Alyce well-known document.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        owner: Atlassian
+        counted: false
+        reason: >-
+          Vendor document served by the Statuspage platform for every customer
+          subdomain; Canonical header points at atlassian.com.
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+agent_card:
+  found: false
+  note: >-
+    Probed /.well-known/agent-card.json and the legacy /.well-known/agent.json on every
+    host above. No 200 carrying AgentCard shape. Per the pipeline contract no a2a/
+    artifact is written and no AgentCard pointer is emitted.

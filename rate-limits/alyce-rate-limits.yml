@@ -1,4 +1,14 @@
 specificationVersion: "0.1"
+generated: '2026-08-13'
+method: searched
+source: >-
+  Alyce's documentation host, https://help.alyce.com/collection/357-integrations, was
+  re-probed on 2026-08-13 and returns Cloudflare error 525 (origin down since at least
+  2025-09-02 per the Internet Archive). No rate-limit reference, no response-header
+  documentation and no exhaustion status code are published at any reachable Alyce URL.
+limit_count: 0
+headers_documented: []
+exhaustion_status: null
 id: alyce-rate-limits
 name: Alyce API Rate Limits
 description: >-
@@ -40,7 +50,10 @@ limits:
     period: Not publicly disclosed
     scope: Per webhook endpoint
 notes: >-
-  Alyce API rate limits are not publicly documented. For specific limits
-  applicable to enterprise and custom integration plans, contact Alyce
-  support via help.alyce.com. Rate limits may be negotiated as part of
-  enterprise contracts.
+  Alyce API rate limits are not publicly documented.
+
+  PROVENANCE (2026-08-13): limit_count is 0. Every entry in limits[] above records
+  an absence ("not publicly disclosed"), not a published limit, and none of them
+  should be counted as a documented limit. The support route named in the original
+  note — help.alyce.com — no longer serves content, and the API host
+  app.alyce.com no longer resolves. See lifecycle/alyce-lifecycle.yml.

@@ -1,0 +1,84 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  Registry searches on 2026-08-13 against npm (registry.npmjs.org search API), PyPI
+  (pypi.org/pypi/<name>/json), RubyGems, Packagist, crates.io and NuGet
+  (azuresearch-usnc.nuget.org), plus the GitHub organization github.com/alycecom.
+package_count: 0
+packages: []
+summary: >-
+  Alyce publishes no first-party client libraries in any public package registry. The
+  company's GitHub organization (github.com/alycecom) exists but contains zero public
+  repositories, and the SDK/download pages that would have listed libraries are on
+  hosts that no longer resolve. Recorded as a verified absence, not an unchecked gap.
+registries_checked:
+  - registry: npm
+    query: alyce
+    first_party_hits: 0
+    note: >-
+      Seven results, none from Alyce, Inc. The closest name match, `alyce` (v0.3.4,
+      published 2026-06-09), is an unrelated terminal assistant from
+      github.com/AlyceSingle/Alyce-Agent.
+  - registry: pypi
+    queried: [alyce, alyce-api, alyce-sdk]
+    first_party_hits: 0
+    note: All 404.
+  - registry: rubygems
+    queried: [alyce]
+    first_party_hits: 0
+    note: 404.
+  - registry: packagist
+    query: alyce
+    first_party_hits: 0
+  - registry: crates.io
+    query: alyce
+    first_party_hits: 0
+    note: 0 results.
+  - registry: nuget
+    query: alyce
+    first_party_hits: 0
+    note: >-
+      Three name matches — Nancy.Swagger.Alyce (2.2.76, 2020-02-17),
+      Alyce.Nancy.Swagger (2.2.67, 2020-02-14) and Swagger.ObjectModel.Alyce (2.2.70,
+      2020-02-17). REJECTED as not first-party: all three are owned by the upstream
+      Nancy.Swagger maintainers (romaluca, d.marchionni, fmarchetti88), all three point
+      at projectUrl github.com/romaluca/Nancy.Swagger, and none is a client library for
+      the Alyce gifting API. See rejected[] below.
+  - registry: github
+    query: github.com/alycecom
+    first_party_hits: 0
+    note: Organization exists; public_repos = 0.
+rejected:
+  - name: Nancy.Swagger.Alyce
+    registry: nuget
+    version: 2.2.76
+    published: '2020-02-17'
+    url: https://www.nuget.org/packages/Nancy.Swagger.Alyce
+    official: false
+    reason: >-
+      Owned by romaluca / d.marchionni / fmarchetti88 (upstream Nancy.Swagger project),
+      not by Alyce, Inc. A fork of a .NET server-side Swagger document generator, not an
+      Alyce API client.
+  - name: Alyce.Nancy.Swagger
+    registry: nuget
+    version: 2.2.67
+    published: '2020-02-14'
+    url: https://www.nuget.org/packages/Alyce.Nancy.Swagger
+    official: false
+    reason: Same upstream owner and project URL as above; not an Alyce API client.
+  - name: Swagger.ObjectModel.Alyce
+    registry: nuget
+    version: 2.2.70
+    published: '2020-02-17'
+    url: https://www.nuget.org/packages/Swagger.ObjectModel.Alyce
+    official: false
+    reason: Same upstream owner and project URL as above; not an Alyce API client.
+  - name: alyce
+    registry: npm
+    version: 0.3.4
+    published: '2026-06-09'
+    url: https://www.npmjs.com/package/alyce
+    official: false
+    reason: >-
+      Unrelated interactive terminal assistant published from
+      github.com/AlyceSingle/Alyce-Agent. Name collision only.

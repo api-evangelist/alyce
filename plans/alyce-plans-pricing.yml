@@ -1,4 +1,12 @@
 specificationVersion: "0.1"
+generated: '2026-08-13'
+method: searched
+source: >-
+  Third-party market data (Vendr, PerkUp, G2). Alyce's own pricing page,
+  https://www.alyce.com/product/, was re-probed on 2026-08-13 and returns NXDOMAIN —
+  the host no longer resolves — so nothing here is provider-published.
+plan_count: 0
+published_by_provider: false
 id: alyce-plans-pricing
 name: Alyce Plans & Pricing
 description: >-
@@ -58,3 +66,10 @@ notes: >-
   platform fees. Custom integrations and advanced automation workflows may
   incur additional setup fees. Alyce was acquired by Sendoso in February 2024
   and now operates as Alyce by Sendoso.
+
+  PROVENANCE (2026-08-13): plan_count is 0 because Alyce never published a
+  machine-readable plan or a public price list. The three tiers above are a
+  third-party market reconstruction from Vendr, PerkUp and G2, retained as
+  historical context only — they must not be read as terms Alyce published.
+  The product is retired: https://www.alyce.com/product/ returns NXDOMAIN and
+  the platform is no longer purchasable. See lifecycle/alyce-lifecycle.yml.

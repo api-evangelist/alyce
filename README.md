@@ -44,11 +44,30 @@
 
 Alyce is an AI-powered corporate gifting platform that enables B2B sales, marketing, and customer success teams to send hyper-personalized gifts at scale. The platform uses AI to research recipient personal interests and recommends relevant gifts, driving higher engagement and acceptance rates compared to generic gifting approaches.
 
-Alyce was acquired by Sendoso in February 2024 and now operates as Alyce by Sendoso, combining two leading intelligent gifting platforms.
+Alyce was acquired by Sendoso in February 2024 and operated as Alyce by Sendoso, combining two leading intelligent gifting platforms.
 
-## API
+## Status: retired (verified 2026-08-13)
 
-Alyce provides a REST API accessible at `https://app.alyce.com/api` for programmatic integration with the gifting platform. The API supports:
+**The standalone Alyce product surface is decommissioned.** Probed on 2026-08-13:
+
+| Host | Result |
+|---|---|
+| `alyce.com`, `www`, `app`, `api`, `docs`, `developer`, `dashboard`, `dashboard-sandbox`, `recipient` | no A/AAAA record at 1.1.1.1, 8.8.8.8 or 9.9.9.9 |
+| `help.alyce.com` (documentation) | Cloudflare error 525 — origin down since at least 2025-09-02 |
+| `status.alyce.com` | HTTP 200 → `alyce.statuspage.io/inactive`, "Page Inactive" |
+| `github.com/alycecom` | HTTP 200, 0 public repositories |
+
+The Internet Archive last records `https://www.alyce.com/` returning 200 on 2025-10-08,
+a 301 on 2025-10-09, and a 404 by 2026-01-02. The domain is still registered (expiry
+2028-12-14) and still carries Google Workspace MX records, so mail resolves, but the
+web product does not. No API, no reachable documentation, and no machine-readable
+contract of any kind is available. Full evidence and timeline:
+[`lifecycle/alyce-lifecycle.yml`](lifecycle/alyce-lifecycle.yml).
+
+## API (historical)
+
+Alyce provided a REST API at `https://app.alyce.com/api` — a host that no longer
+resolves — for programmatic integration with the gifting platform. The API supported:
 
 - Sending personalized gift invitations
 - Tracking gift status (sent, accepted, declined, exchanged, donated)
@@ -67,13 +86,14 @@ Alyce integrates natively with:
 
 ## Links
 
-- **Website**: https://www.alyce.com/
-- **Documentation**: https://help.alyce.com/collection/357-integrations
-- **Blog**: https://www.alyce.com/blog/
-- **Status**: https://status.alyce.com/
-- **GitHub**: https://github.com/alycecom
-- **LinkedIn**: https://www.linkedin.com/company/alyce-co
-- **X**: https://x.com/alycegifts
+- **Website**: https://www.alyce.com/ — *NXDOMAIN as of 2026-08-13*
+- **Documentation**: https://help.alyce.com/collection/357-integrations — *HTTP 525*
+- **Blog**: https://www.alyce.com/blog/ — *NXDOMAIN*
+- **Status**: https://status.alyce.com/ — *inactive*
+- **GitHub**: https://github.com/alycecom — *live, 0 public repos*
+- **LinkedIn**: https://www.linkedin.com/company/alyce-co — *live*
+- **X**: https://x.com/alycegifts — *live*
+- **Acquirer**: https://www.sendoso.com/ — *live*
 
 ## APIs.json
 
