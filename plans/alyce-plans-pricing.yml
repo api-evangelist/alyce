@@ -73,3 +73,27 @@ notes: >-
   historical context only — they must not be read as terms Alyce published.
   The product is retired: https://www.alyce.com/product/ returns NXDOMAIN and
   the platform is no longer purchasable. See lifecycle/alyce-lifecycle.yml.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: QuickStart
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Professional
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
