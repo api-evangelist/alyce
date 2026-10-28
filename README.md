@@ -64,59 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Alyce is an AI-powered corporate gifting platform that enables B2B sales, marketing, and customer success teams to send hyper-personalized gifts at scale. The platform uses AI to research recipient personal interests and recommends relevant gifts, driving higher engagement and acceptance rates compared to generic gifting approaches.
+Alyce is an AI-powered corporate gifting platform that enables B2B sales, marketing, and customer success teams to send hyper-personalized gifts at scale. The platform provides a REST API for sending personalized gifts, tracking gift acceptance and engagement, managing budgets and marketplaces, and integrating with CRM and marketing automation tools including Salesforce, HubSpot, Marketo, Eloqua, Outreach, and Salesloft. Alyce, Inc. was acquired by Sendoso in February 2024 and operated as "Alyce by Sendoso"; the standalone Alyce product surface has since been decommissioned — as of August 2026 the alyce.com apex and every product subdomain (www, app, api, docs, dashboard, recipient) no longer resolve, the documentation host returns a Cloudflare origin error, and the status page is inactive. This profile is retained as a historical record.
 
-Alyce was acquired by Sendoso in February 2024 and operated as Alyce by Sendoso, combining two leading intelligent gifting platforms.
+**Areas:** Gifting · Corporate Gifting · B2B · Marketing Automation · CRM Integration · Account Based Marketing · Sales Enablement · Artificial Intelligence · Personalization · Direct Mail
 
-## Status: retired (verified 2026-08-13)
+## Alyce on APIs.io
 
-**The standalone Alyce product surface is decommissioned.** Probed on 2026-08-13:
+Everything profiled for Alyce is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/alyce/](https://apis.io/providers/alyce/)** — or go straight to one of the APIs or properties below.
 
-| Host | Result |
+### APIs (1)
+
+- [Alyce API](https://apis.io/apis/alyce/alyce-api/) — REST API for the Alyce corporate gifting platform enabling programmatic gift sending, recipient tracking, budget management, marketplace configuration, and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Alyce Context](https://apis.io/jsonld/alyce/alyce-context/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Alyce Domain Security](https://apis.io/security/alyce/alyce-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Alyce Plans Pricing](https://apis.io/plans/alyce/alyce-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Alyce Rate Limits](https://apis.io/rate-limits/alyce/alyce-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Alyce Finops](https://apis.io/finops/alyce/alyce-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.alyce.com/)
+
+## API Evangelist rating
+
+**Kin Score 19.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `alyce.com`, `www`, `app`, `api`, `docs`, `developer`, `dashboard`, `dashboard-sandbox`, `recipient` | no A/AAAA record at 1.1.1.1, 8.8.8.8 or 9.9.9.9 |
-| `help.alyce.com` (documentation) | Cloudflare error 525 — origin down since at least 2025-09-02 |
-| `status.alyce.com` | HTTP 200 → `alyce.statuspage.io/inactive`, "Page Inactive" |
-| `github.com/alycecom` | HTTP 200, 0 public repositories |
+| Discoverability | 66.1 |
+| Contract quality | 10.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 31.6 |
 
-The Internet Archive last records `https://www.alyce.com/` returning 200 on 2025-10-08,
-a 301 on 2025-10-09, and a 404 by 2026-01-02. The domain is still registered (expiry
-2028-12-14) and still carries Google Workspace MX records, so mail resolves, but the
-web product does not. No API, no reachable documentation, and no machine-readable
-contract of any kind is available. Full evidence and timeline:
-[`lifecycle/alyce-lifecycle.yml`](lifecycle/alyce-lifecycle.yml).
+**Agent readiness 2.5** — human-only
 
-## API (historical)
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-Alyce provided a REST API at `https://app.alyce.com/api` — a host that no longer
-resolves — for programmatic integration with the gifting platform. The API supported:
+**Regulatory alignment 10.0** — Horizontal (data, software, accessibility, platform)
 
-- Sending personalized gift invitations
-- Tracking gift status (sent, accepted, declined, exchanged, donated)
-- Managing gift budgets and marketplace configuration
-- Triggering gift sends from CRM workflows
-- Webhooks for real-time gift event notifications
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/alyce/](https://apis.io/providers/alyce/).
 
-## Integrations
+## How this profile is made
 
-Alyce integrates natively with:
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- **CRM**: Salesforce, HubSpot
-- **Marketing Automation**: Marketo, Eloqua
-- **Sales Engagement**: Outreach, Salesloft
-- **ABM Platforms**: 6sense, Demandbase, RollWorks
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Alyce: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-## Links
+## Open an issue
 
-- **Website**: https://www.alyce.com/ — *NXDOMAIN as of 2026-08-13*
-- **Documentation**: https://help.alyce.com/collection/357-integrations — *HTTP 525*
-- **Blog**: https://www.alyce.com/blog/ — *NXDOMAIN*
-- **Status**: https://status.alyce.com/ — *inactive*
-- **GitHub**: https://github.com/alycecom — *live, 0 public repos*
-- **LinkedIn**: https://www.linkedin.com/company/alyce-co — *live*
-- **X**: https://x.com/alycegifts — *live*
-- **Acquirer**: https://www.sendoso.com/ — *live*
-
-## APIs.json
-
-This repository contains an [APIs.json](apis.yml) profile cataloging the Alyce API and associated resources including plans, rate limits, and FinOps data.
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/alyce/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
